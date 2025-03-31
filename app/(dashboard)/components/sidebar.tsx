@@ -8,8 +8,12 @@ import {
   CalendarIcon, 
   SettingsIcon, 
   SearchIcon, 
+  FilterIcon, 
+  BellIcon, 
   BriefcaseIcon, 
-  MenuIcon
+  MenuIcon, 
+  MoreIcon, 
+  PlusIcon 
 } from "@/components/icons";
 
 /**

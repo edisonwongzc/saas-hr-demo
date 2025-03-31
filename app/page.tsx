@@ -52,7 +52,7 @@ export default function Home() {
       </Card>
       
       <p className="mt-6 text-sm text-gray-600">
-        演示系统 © {new Date().getFullYear()} | 点击"登录"按钮直接进入系统
+        演示系统 © {new Date().getFullYear()} | 点击`&quot;`登录`&quot;`按钮直接进入系统
       </p>
     </div>
   );

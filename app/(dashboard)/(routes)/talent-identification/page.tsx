@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { PlusIcon, SearchIcon } from "@/components/icons";
+import { SearchIcon } from "@/components/icons";
 
 /**
  * 人才识别页面组件
@@ -54,7 +54,6 @@ export default function TalentIdentificationPage() {
                   />
                 </div>
                 <Button className="bg-[#3C5E5C] hover:bg-[#2A4A48] text-white text-xs px-3 py-1 h-8 rounded-md">
-                  <PlusIcon size={14} className="mr-1" />
                   添加计划
                 </Button>
               </div>
@@ -124,7 +123,6 @@ export default function TalentIdentificationPage() {
             <CardHeader className="flex flex-row items-center justify-between py-4 px-6 border-b border-gray-100">
               <CardTitle style={{color: '#3C5E5C'}} className="text-sm font-medium">继任者提名管理</CardTitle>
               <Button className="bg-[#3C5E5C] hover:bg-[#2A4A48] text-white text-xs px-3 py-1 h-8 rounded-md">
-                <PlusIcon size={14} className="mr-1" />
                 添加提名
               </Button>
             </CardHeader>
@@ -224,7 +222,6 @@ export default function TalentIdentificationPage() {
                   筛选
                 </Button>
                 <Button className="bg-[#3C5E5C] hover:bg-[#2A4A48] text-white text-xs px-3 py-1 h-8 rounded-md">
-                  <PlusIcon size={14} className="mr-1" />
                   添加人才
                 </Button>
               </div>

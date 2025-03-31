@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { PlusIcon, EditIcon } from "@/components/icons";
+import { PlusIcon, EditIcon, XIcon } from "@/components/icons";
 import { useState } from "react";
 
 /**
@@ -1684,87 +1684,96 @@ export default function TalentStandardsPage() {
                     <button className="text-[#3C5E5C] font-medium hover:underline">查看更多</button>
                   </div>
                 </div>
-                
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-sm text-gray-800">能力对比结果</h3>
-                  </div>
-                  
-                  <div className="overflow-x-auto border border-gray-200 rounded-lg">
-                    <table className="min-w-full divide-y divide-gray-200">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            员工
-                          </th>
-                          <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            能力
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="bg-white divide-y divide-gray-200">
-                        <tr>
-                          <td className="px-4 py-4 whitespace-nowrap">
-                            <div className="flex items-center">
-                              <div className="flex-shrink-0 h-10 w-10 rounded-full overflow-hidden">
-                                <img src="/avatar.png" alt="员工头像" className="h-10 w-10 object-cover" />
-                              </div>
-                              <div className="ml-4">
-                                <div className="text-sm font-medium text-gray-900">Anders Wahlström</div>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="px-4 py-4">
-                            <div className="space-y-2">
-                              <div>
-                                <div className="text-xs text-gray-500">主动倾听（熟练）</div>
-                                <div className="text-xs text-gray-500">冲突管理（熟练）</div>
-                                <div className="text-xs text-gray-500">核心价值观（熟练）</div>
-                                <div className="text-xs text-gray-500">客户关注点（专家）</div>
-                                <div className="text-xs text-gray-500">优先级设定（专家）</div>
-                                <div className="text-xs text-gray-500">问题解决（熟练）</div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td className="px-4 py-4 whitespace-nowrap">
-                            <div className="flex items-center">
-                              <div className="flex-shrink-0 h-10 w-10 rounded-full overflow-hidden">
-                                <img src="/avatar.png" alt="员工头像" className="h-10 w-10 object-cover" />
-                              </div>
-                              <div className="ml-4">
-                                <div className="text-sm font-medium text-gray-900">Anthony Chong</div>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="px-4 py-4">
-                            <div className="space-y-2">
-                              <div>
-                                <div className="text-xs text-gray-500">主动倾听（熟练）</div>
-                                <div className="text-xs text-gray-500">冲突管理（熟练）</div>
-                                <div className="text-xs text-gray-500">核心价值观（高级）</div>
-                                <div className="text-xs text-gray-500">客户关注点（专家）</div>
-                                <div className="text-xs text-gray-500">领域专长（熟练）</div>
-                                <div className="text-xs text-gray-500">更多 (4)</div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                
-                <div className="mt-6 mb-2 flex justify-end">
-                  <Button className="bg-[#3C5E5C] hover:bg-[#2A4A48] text-white text-xs px-3 py-1 h-8 rounded-md">
-                    导出对比报告
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           </div>
         </TabsContent>
+
+        {/* 员工对比弹窗 */}
+        {showComparisonModal && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="bg-white rounded-lg p-6 z-10 w-full max-w-md">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="font-semibold text-base text-gray-800">能力对比结果</h3>
+                <button onClick={() => setShowComparisonModal(false)}>
+                  <XIcon size={20} className="text-gray-500 hover:text-gray-700" />
+                </button>
+              </div>
+              
+              <div className="overflow-x-auto border border-gray-200 rounded-lg">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        员工
+                      </th>
+                      <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        能力
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    <tr>
+                      <td className="px-4 py-4 whitespace-nowrap">
+                        <div className="flex items-center">
+                          <div className="flex-shrink-0 h-10 w-10 rounded-full overflow-hidden">
+                            <img src="/avatar.png" alt="员工头像" className="h-10 w-10 object-cover" />
+                          </div>
+                          <div className="ml-4">
+                            <div className="text-sm font-medium text-gray-900">Anders Wahlström</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="px-4 py-4">
+                        <div className="space-y-2">
+                          <div>
+                            <div className="text-xs text-gray-500">主动倾听（熟练）</div>
+                            <div className="text-xs text-gray-500">冲突管理（熟练）</div>
+                            <div className="text-xs text-gray-500">核心价值观（熟练）</div>
+                            <div className="text-xs text-gray-500">客户关注点（专家）</div>
+                            <div className="text-xs text-gray-500">优先级设定（专家）</div>
+                            <div className="text-xs text-gray-500">问题解决（熟练）</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 whitespace-nowrap">
+                        <div className="flex items-center">
+                          <div className="flex-shrink-0 h-10 w-10 rounded-full overflow-hidden">
+                            <img src="/avatar.png" alt="员工头像" className="h-10 w-10 object-cover" />
+                          </div>
+                          <div className="ml-4">
+                            <div className="text-sm font-medium text-gray-900">Anthony Chong</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="px-4 py-4">
+                        <div className="space-y-2">
+                          <div>
+                            <div className="text-xs text-gray-500">主动倾听（熟练）</div>
+                            <div className="text-xs text-gray-500">冲突管理（熟练）</div>
+                            <div className="text-xs text-gray-500">核心价值观（高级）</div>
+                            <div className="text-xs text-gray-500">客户关注点（专家）</div>
+                            <div className="text-xs text-gray-500">领域专长（熟练）</div>
+                            <div className="text-xs text-gray-500">更多 (4)</div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div className="mt-6 mb-2 flex justify-end">
+                <Button className="bg-[#3C5E5C] hover:bg-[#2A4A48] text-white text-xs px-3 py-1 h-8 rounded-md">
+                  导出对比报告
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
       </Tabs>
     </div>
   );
