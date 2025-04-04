@@ -360,4 +360,30 @@ export function XIcon({ size = 24, ...props }: IconProps) {
       <line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   );
+}
+
+/**
+ * 领导力能力库图标组件
+ * @param {IconProps} props - 图标属性
+ * @returns {JSX.Element} 领导力能力库图标
+ */
+export function LeadershipIcon({ size = 24, ...props }: IconProps) {
+  return (
+    <svg 
+      width={size} 
+      height={size} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M12 2a3 3 0 0 0-3 3v1h6V5a3 3 0 0 0-3-3Z" />
+      <path d="M19 5H5a2 2 0 0 0-2 2v1h18V7a2 2 0 0 0-2-2Z" />
+      <path d="M3 8v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8" />
+      <path d="m9 14 2 2 4-4" />
+    </svg>
+  );
 } 

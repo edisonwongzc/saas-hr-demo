@@ -11,7 +11,7 @@ import { PlusIcon } from "@/components/icons";
  */
 export default function TalentDevelopmentPage() {
   return (
-    <div className="h-full pt-1 px-6 pb-4 space-y-2 bg-[#f8fafc]">
+    <div className="h-full pt-1 px-6 pb-4 space-y-2 bg-[#f4f7fa]">
       <div className="mb-1">
         <h1 className="text-[18px] font-bold text-gray-800">人才培育</h1>
         <p className="text-sm text-gray-500">制定发展计划和管理导师关系</p>
@@ -163,11 +163,11 @@ export default function TalentDevelopmentPage() {
                     <h4 className="text-xs font-medium mb-2 text-gray-700">发展目标</h4>
                     <div className="text-sm text-gray-600 mb-4">晋升至技术专家岗位，提升系统架构设计能力和团队管理能力</div>
                     
-                    <h4 className="text-xs font-medium mb-2 text-gray-700">培养计划进度</h4>
+                    <h4 className="text-xs font-medium mb-2 text-gray-700">目标完成进度</h4>
                     <div className="space-y-2">
                       <div>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-xs text-gray-700">系统架构设计培训</span>
+                          <span className="text-xs text-gray-700">战-项目完成进度</span>
                           <span className="text-xs text-gray-500">75%</span>
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -176,7 +176,7 @@ export default function TalentDevelopmentPage() {
                       </div>
                       <div>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-xs text-gray-700">团队管理课程</span>
+                          <span className="text-xs text-gray-700">训-导师辅导进度</span>
                           <span className="text-xs text-gray-500">50%</span>
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -185,7 +185,7 @@ export default function TalentDevelopmentPage() {
                       </div>
                       <div>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-xs text-gray-700">技术专家轮岗学习</span>
+                          <span className="text-xs text-gray-700">学-学习进度</span>
                           <span className="text-xs text-gray-500">25%</span>
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -215,11 +215,11 @@ export default function TalentDevelopmentPage() {
                     <h4 className="text-xs font-medium mb-2 text-gray-700">发展目标</h4>
                     <div className="text-sm text-gray-600 mb-4">晋升至高级产品经理岗位，提升产品规划能力和市场分析能力</div>
                     
-                    <h4 className="text-xs font-medium mb-2 text-gray-700">培养计划进度</h4>
+                    <h4 className="text-xs font-medium mb-2 text-gray-700">目标完成进度</h4>
                     <div className="space-y-2">
                       <div>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-xs text-gray-700">产品规划培训</span>
+                          <span className="text-xs text-gray-700">战-项目完成进度</span>
                           <span className="text-xs text-gray-500">60%</span>
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -228,7 +228,7 @@ export default function TalentDevelopmentPage() {
                       </div>
                       <div>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-xs text-gray-700">市场分析课程</span>
+                          <span className="text-xs text-gray-700">学-学习进度</span>
                           <span className="text-xs text-gray-500">40%</span>
                         </div>
                         <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
@@ -254,7 +254,7 @@ export default function TalentDevelopmentPage() {
             </CardHeader>
             <CardContent className="p-6">
               <div className="rounded-md border border-gray-200">
-                <div className="bg-gray-50 p-4 grid grid-cols-5 gap-2 text-xs font-medium text-gray-700">
+                <div className="bg-gray-50 p-4 grid grid-cols-6 gap-1 text-xs font-medium text-gray-700">
                   <div>导师信息</div>
                   <div>专长领域</div>
                   <div>辅导学员</div>
@@ -263,84 +263,147 @@ export default function TalentDevelopmentPage() {
                 </div>
                 
                 <div className="divide-y divide-gray-200">
-                  <div className="p-4 grid grid-cols-5 gap-2 text-sm hover:bg-gray-50">
+                  <div className="p-4 grid grid-cols-6 gap-1 text-sm hover:bg-gray-50">
                     <div className="flex items-center gap-2">
-                      <div className="w-9 h-9 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-medium">张</div>
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="张三" className="w-9 h-9 rounded-full object-cover" />
                       <div>
                         <div className="text-gray-800 font-medium">张三</div>
                         <div className="text-xs text-gray-500">技术总监</div>
                       </div>
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 flex items-center h-full">
                       <div className="flex flex-wrap gap-1">
                         <span className="px-2 py-0.5 text-xs bg-blue-50 text-blue-700 rounded-full">系统架构</span>
                         <span className="px-2 py-0.5 text-xs bg-blue-50 text-blue-700 rounded-full">团队管理</span>
                       </div>
                     </div>
-                    <div className="text-gray-600">3人</div>
-                    <div>
+                    <div className="text-gray-600 flex items-center h-full">3人</div>
+                    <div className="flex items-center h-full">
                       <span className="px-2 py-0.5 text-xs bg-green-100 text-green-700 rounded-full">活跃</span>
                     </div>
-                    <div className="flex space-x-2">
-                      <Button variant="ghost" size="sm" className="text-xs h-7 text-[#3C5E5C]">查看详情</Button>
-                      <Button variant="ghost" size="sm" className="text-xs h-7 text-[#3C5E5C]">分配学员</Button>
+                    <div className="flex space-x-5 items-center">
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">查看详情</Button>
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">分配学员</Button>
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">制定活动</Button>
                     </div>
                   </div>
                   
-                  <div className="p-4 grid grid-cols-5 gap-2 text-sm hover:bg-gray-50">
+                  <div className="p-4 grid grid-cols-6 gap-1 text-sm hover:bg-gray-50">
                     <div className="flex items-center gap-2">
-                      <div className="w-9 h-9 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-medium">李</div>
+                      <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="李四" className="w-9 h-9 rounded-full object-cover" />
                       <div>
                         <div className="text-gray-800 font-medium">李四</div>
                         <div className="text-xs text-gray-500">产品总监</div>
                       </div>
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 flex items-center h-full">
                       <div className="flex flex-wrap gap-1">
                         <span className="px-2 py-0.5 text-xs bg-purple-50 text-purple-700 rounded-full">产品设计</span>
                         <span className="px-2 py-0.5 text-xs bg-purple-50 text-purple-700 rounded-full">用户体验</span>
                       </div>
                     </div>
-                    <div className="text-gray-600">2人</div>
-                    <div>
+                    <div className="text-gray-600 flex items-center h-full">2人</div>
+                    <div className="flex items-center h-full">
                       <span className="px-2 py-0.5 text-xs bg-green-100 text-green-700 rounded-full">活跃</span>
                     </div>
-                    <div className="flex space-x-2">
-                      <Button variant="ghost" size="sm" className="text-xs h-7 text-[#3C5E5C]">查看详情</Button>
-                      <Button variant="ghost" size="sm" className="text-xs h-7 text-[#3C5E5C]">分配学员</Button>
+                    <div className="flex space-x-5 items-center">
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">查看详情</Button>
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">分配学员</Button>
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">制定活动</Button>
                     </div>
                   </div>
                   
-                  <div className="p-4 grid grid-cols-5 gap-2 text-sm hover:bg-gray-50">
+                  <div className="p-4 grid grid-cols-6 gap-1 text-sm hover:bg-gray-50">
                     <div className="flex items-center gap-2">
-                      <div className="w-9 h-9 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-700 font-medium">王</div>
+                      <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="王五" className="w-9 h-9 rounded-full object-cover" />
                       <div>
                         <div className="text-gray-800 font-medium">王五</div>
                         <div className="text-xs text-gray-500">市场总监</div>
                       </div>
                     </div>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 flex items-center h-full">
                       <div className="flex flex-wrap gap-1">
                         <span className="px-2 py-0.5 text-xs bg-yellow-50 text-yellow-700 rounded-full">市场策略</span>
                         <span className="px-2 py-0.5 text-xs bg-yellow-50 text-yellow-700 rounded-full">品牌营销</span>
                       </div>
                     </div>
-                    <div className="text-gray-600">1人</div>
-                    <div>
+                    <div className="text-gray-600 flex items-center h-full">1人</div>
+                    <div className="flex items-center h-full">
                       <span className="px-2 py-0.5 text-xs bg-gray-100 text-gray-700 rounded-full">暂停</span>
                     </div>
-                    <div className="flex space-x-2">
-                      <Button variant="ghost" size="sm" className="text-xs h-7 text-[#3C5E5C]">查看详情</Button>
-                      <Button variant="ghost" size="sm" className="text-xs h-7 text-[#3C5E5C]">分配学员</Button>
+                    <div className="flex space-x-5 items-center">
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">查看详情</Button>
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">分配学员</Button>
+                      <Button variant="link" size="sm" className="text-xs h-7 text-[#3C5E5C] p-0 hover:no-underline">制定活动</Button>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-8">
-                <h3 className="text-sm font-medium mb-4" style={{color: '#3C5E5C'}}>导师-学员匹配情况</h3>
-                <div className="h-64 border border-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-sm text-gray-500">导师-学员匹配图表区域</p>
+              <div className="mt-8 space-y-6">
+                <div>
+                  <h3 className="text-sm font-medium mb-4" style={{color: '#3C5E5C'}}>沟通记录</h3>
+                  <div className="border border-gray-200 rounded-lg overflow-hidden">
+                    <table className="min-w-full divide-y divide-gray-200">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 tracking-wider">时间</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 tracking-wider">导师</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 tracking-wider">学员</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 tracking-wider">主题</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 tracking-wider">完成率</th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 tracking-wider">评分</th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">2023-11-15</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">张三</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">李十三</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">系统架构设计指导</td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center">
+                              <div className="w-16 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                <div className="bg-green-500 h-full w-[85%]"></div>
+                              </div>
+                              <span className="ml-2 text-xs text-gray-700">85%</span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">4.5/5</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">2023-11-10</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">李四</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">王五</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">产品规划评审</td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center">
+                              <div className="w-16 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                <div className="bg-blue-500 h-full w-[70%]"></div>
+                              </div>
+                              <span className="ml-2 text-xs text-gray-700">70%</span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">4.0/5</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">2023-11-05</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">张三</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">钱七</td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">团队管理经验分享</td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center">
+                              <div className="w-16 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+                                <div className="bg-amber-500 h-full w-[60%]"></div>
+                              </div>
+                              <span className="ml-2 text-xs text-gray-700">60%</span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-xs text-gray-700">3.8/5</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </CardContent>
